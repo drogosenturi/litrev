@@ -1,0 +1,15 @@
+options(vsc.dev.args = list(width = 800, height = 600))
+
+setwd('/mnt/c/users/Nikolas/Documents/netlogo models/yardsmodel/bird-human/sensitivty_bs')
+data <- read.csv('birds_human_feedback_v8_sensitivity-table.csv')
+
+head(data)
+
+which(data$count.turtles == 0)
+
+data$max.bird[data[,7]==0]
+data$mean.vegetation.volume[data[,7]==0]
+data$habitat.radius[data[,7]==0]
+data$dispersal.distance[data[,7]==0]
+
+qqplot(data$count.patches.with..bird.love...0.,data$count.turtles)
