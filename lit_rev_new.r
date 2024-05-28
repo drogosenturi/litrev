@@ -1,5 +1,6 @@
 library(revtools)
 setwd('~/R_files/lit_review/')
+setwd('~/litrev/')
 
 old_final <- read_bibliography('final_bib.ris')
 data <- read_bibliography('new_search_5-24.bib')
@@ -32,3 +33,4 @@ screened_titles <- readRDS('screened_titles_5-24.rds')
 #remove excluded studies
 screened_titles_selected <- screened_titles[!(screened_titles$screened_titles
                                               %in% "excluded"),]
+screen_abstracts(screened_titles_selected)
