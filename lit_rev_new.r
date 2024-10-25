@@ -1,6 +1,6 @@
 library(revtools)
 setwd('~/R_files/lit_review/')
-setwd('~/litrev/')
+setwd('~/litrev/') # laptop
 
 old_final <- read_bibliography('final_bib.ris')
 data <- read_bibliography('new_search_5-24.bib')
@@ -34,3 +34,16 @@ screened_titles <- readRDS('screened_titles_5-24.rds')
 screened_titles_selected <- screened_titles[!(screened_titles$screened_titles
                                               %in% "excluded"),]
 screen_abstracts(screened_titles_selected)
+
+# FINAL SCREENED
+screened_abstracts <- readRDS('screened_abstracts.rds')
+selected_final <- screened_abstracts[!(screened_abstracts$screened_abstracts
+                                        %in% "excluded"),]
+excluded_final <- screened_abstracts[!(screened_abstracts$screened_abstracts
+                                        %in% "selected"),]
+# tidy up
+selected_final <- selected_final[,-c(22,28,26,24,23)]
+excluded_final <- excluded_final[,-c(22,28,26,24,23)]
+# save files
+write_bibliography(selected_final, "final_batch_5-29.ris")
+write_bibliography(excluded_final, "excluded_5-29.ris")
