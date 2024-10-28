@@ -1,6 +1,6 @@
 library(revtools)
 setwd('~/R_files/lit_review/')
-setwd('~/litrev/') # laptop
+#setwd('~/litrev/') # laptop
 
 old_final <- read_bibliography('final_bib.ris')
 data <- read_bibliography('new_search_5-24.bib')
