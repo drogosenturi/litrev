@@ -1,0 +1,2 @@
+final search on 11-11 @ 10PM
+TS = ((resident* OR homeowner* OR householder*) AND (garden* OR *yard*) AND (animal OR pest OR wildlife OR bird* OR mammal* OR insect* OR invertebrate* OR reptile* OR amphibian* OR nonhuman OR pollinator* OR pro-environmental OR wildlife-friendly OR biodiversity) AND (survey OR interview* OR questionnaire* OR "theory of planned behavior" OR "behavior change" OR "human-nature connection" OR "urban greening" OR conservation OR "environmental stewardship") NOT (disease OR contaminat* OR infect*))
